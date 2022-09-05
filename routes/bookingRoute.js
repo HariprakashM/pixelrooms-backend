@@ -58,8 +58,11 @@ const moment = require("moment");
 const { v4: uuidv4 } = require("uuid");
 const Room = require("../models/room");
 const stripe = require("stripe")(
-  "sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf"
+  "sk_test_51LeHpZIjTW834vhapGxONtJOuSIA960xmS94XHdU8Cy175Jd0vUmyc26kRrklsxheUg5mJ1RouA94VjVQb4Xqd4g00w513MhUX"
 );
+// const stripe = require("stripe")(
+//   "sk_test_51IYnC0SIR2AbPxU0EiMx1fTwzbZXLbkaOcbc2cXx49528d9TGkQVjUINJfUDAnQMVaBFfBDP5xtcHCkZG1n1V3E800U7qXFmGf"
+// );
 
 router.post("/bookroom", async (req, res) => {
   const { room, userid, fromdate, todate, totalamount, totaldays, token } =
